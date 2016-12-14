@@ -4,6 +4,9 @@
 - 使用sass样式预处理器编写css3样式
 - 使用bootstrap框架布局及实现响应式
 - 使用jquery操控DOM元素
+
+***
+----
 node+express+angular+mongodb
 
 - 这个语法可以添加图片
