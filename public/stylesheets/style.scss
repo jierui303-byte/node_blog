@@ -1,15 +1,25 @@
 body{
-  padding: 50px;
+  margin: 0;
+  padding: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+/*
+scss文件编译:
+1. 进入scss文件所在目录,
+http://www.w3cplus.com/sassguide/compile.html
+执行单文件转换命令进行编译:
+sass style.scss style.css   //把style.scss文件编译成style.css文件
+*/
 
 
 //头部开始
 header{
   background: red;
   height: 100px;
+  font-size: 18px;
 }
+
 
 //头部结束
 
