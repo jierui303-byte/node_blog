@@ -1,6 +1,11 @@
+$bgColor : #4a4a4a;
+$mainColor : #4CAF50;
+$bgHoverColor : #5eb762;
+
 body{
   margin: 0;
   padding: 0;
+  background: #f4f4f4;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -10,18 +15,750 @@ scss文件编译:
 http://www.w3cplus.com/sassguide/compile.html
 执行单文件转换命令进行编译:
 sass style.scss style.css   //把style.scss文件编译成style.css文件
+
+最外层的类自定义, 这样就可以重写里面的css样式, 不会影响到全局的css样式
 */
 
 
 //头部开始
 header{
-  background: red;
-  height: 100px;
+  background: #fff;
+  min-height: 100px;
   font-size: 18px;
+
+  .logo{
+    display:block;
+    margin-top: 10px;
+    .img-thumbnail{
+      border:none;
+    }
+  }
+
+
+
+  .input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    top: 33px;
+
+    .form-control{
+      height: 41px;
+      border: 3px solid $mainColor;
+      border-radius: 0;
+    }
+
+    .btn{
+      height: 41px;
+    }
+
+    .btn-default {
+      color: #fff;
+      background-color: $mainColor;
+      border-color: $mainColor;
+    }
+
+  }
+
+  .gg1{
+    display: block;
+    //margin: 25px auto;
+    margin: 25px 90px;
+  }
+
+}
+
+.navbar-default.navigator{
+  background-color: $bgColor;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+  border-radius: 0;
+  border-bottom:5px solid $mainColor;
+
+  .navbar-nav{
+    margin-bottom: 0;
+  }
+
+  .navbar-nav > li > a{
+    color:#fff;
+
+    &:hover{
+      color:#fff;
+      background-color: $bgHoverColor;
+    }
+
+  }
+
+  .navbar-nav > .active a:hover{
+    color:#fff;
+    background-color: $bgHoverColor;
+  }
+
+
+
 }
 
 
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover{
+  color: #555;
+  background-color: $bgHoverColor;
+}
+
+
+
+//公告栏
+.notice{
+  height: 39px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background: #fff;
+  ul{
+    //background: red;
+    li{
+      background: url("/images/volume.png") no-repeat 6% 12px;
+      padding-left: 8%;
+      a{
+        padding-left: 10px;
+        width:90%;/*要显示文字的宽度*/
+        overflow:hidden; /*超出的部分隐藏起来。*/
+        white-space:nowrap;/*不显示的地方用省略号...代替*/
+        text-overflow:ellipsis;/* 支持 IE */
+
+        &:hover a{
+          text-decoration: none;
+        }
+      };
+    }
+
+  }
+
+}
+
+
+
+@media (min-width: 768px){
+  .navbar {
+    border-radius: 4px;
+  }
+  .navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+  }
+}
+
 //头部结束
+
+
+
+
+
+//左侧布局 开始
+.col-lg-69{
+  width:69%;
+}
+.col-lg-30{
+  width:30%;
+}
+.content{
+  //background: orchid;
+  .contentLeft{
+    float:left;
+
+    //轮播图
+    .lunbo{
+      .carousel-inner>.active img{
+        transform: scale(1);
+        transition:all 0.5s;
+      }
+      .carousel-inner>.active:hover img{
+        transform: scale(1.1);
+      }
+
+      //显示文字
+      .carousel-caption{
+        width:100%;
+        top:0;
+        left:0;
+        right:0;
+        bottom:86%;
+        padding-top: 9px;
+        background: rgba(0,0,0,0.3);
+      }
+
+    }
+
+
+
+
+
+    //最新内容
+    .newContent{
+      padding:10px;
+      margin-bottom: 10px;
+      background: #fff;
+      h3{
+        color:#555;
+        padding-bottom: 20px;
+        //padding-top: 20px;
+        border-bottom: 1px solid $bgHoverColor;
+        //border-top: 1px solid $bgHoverColor;
+      }
+      ul{
+        li{
+          //background: url("/images/");
+          border:none;
+          i{
+            color:#bbb;
+            transform: rotate(0deg);
+            transition:all 1s;
+          }
+          &:hover>i{
+            transform: rotate(360deg);
+            color:#4a4a4a;
+          }
+          a{
+            display: inline-block;
+            color:#00a67c;
+            font-size: 13px;
+            padding-left: 3px;
+            width:94%;/*要显示文字的宽度*/
+            overflow:hidden; /*超出的部分隐藏起来。*/
+            white-space:nowrap;/*不显示的地方用省略号...代替*/
+            text-overflow:ellipsis;/* 支持 IE */
+            transition: all 0.3s;
+
+            &:hover{
+              color:#007046;
+              text-decoration: none;
+            }
+          }
+
+
+        }
+        li:nth-of-type(1n){
+          width:49.5%;
+          float:left;
+          margin-right: 5px;
+        }
+        li:nth-of-type(2n){
+          float:right;
+          margin-right: 0;
+        }
+      }
+    }
+
+    //企业主题
+    .qyzt{
+      padding:10px;
+      margin-bottom: 10px;
+      background: #fff;
+      h3{
+        color:#555;
+        padding-bottom: 20px;
+        //padding-top: 20px;
+        border-bottom: 1px solid $bgHoverColor;
+        //border-top: 1px solid $bgHoverColor;
+      }
+
+      ul{
+        //background: red;
+        overflow: hidden;
+        li{
+          float:left;
+          height: 170px;
+          position: relative;
+          //background: red;
+          border:none;
+          padding: 5px;
+
+          a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #fff;
+
+            //图片
+            img{
+              display: block;
+              width: 100%;
+              height: 100%;
+              transform: scale(1.1) rotate(0deg);
+              transition: all 1s;
+            }
+
+            &:hover img{
+              transform: scale(1.1) rotate(30deg);
+            }
+
+          }
+
+          //图片标题
+          .qyztitle{
+            width: 96.5%;
+            height: 17%;
+            background: rgba(0,0,0,0.2);
+            color:#fff;
+            position: absolute;
+            bottom:10px;
+            left:5px;
+            padding:5px;
+
+            p{
+              width:94%;/*要显示文字的宽度*/
+              overflow:hidden; /*超出的部分隐藏起来。*/
+              white-space:nowrap;/*不显示的地方用省略号...代替*/
+              text-overflow:ellipsis;/* 支持 IE */
+              text-indent: -100px;
+              transform: rotateY(90deg);
+              transition: all 1s;
+            }
+
+          }
+
+          &:hover .qyztitle{
+            background: rgba(0,0,0,0.5);
+          }
+
+          &:hover p{
+            text-indent: 0;
+            transform: rotateY(0deg);
+          }
+
+        }
+      }
+    }
+
+
+    //html5小示例
+    .lxsl{
+      padding:10px;
+      margin-bottom: 10px;
+      background: #fff;
+      h3{
+        color:#555;
+        padding-bottom: 20px;
+        //padding-top: 20px;
+        border-bottom: 1px solid $bgHoverColor;
+        //border-top: 1px solid $bgHoverColor;
+      }
+
+      ul{
+        //background: red;
+        overflow: hidden;
+
+        li{
+          float:left;
+          height: 170px;
+          position: relative;
+          //background: red;
+          border:none;
+          padding: 5px;
+
+          a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #fff;
+            position: relative;
+
+            .imgLeft{
+              width:50%;
+              height: 100%;
+              float:left;
+              overflow: hidden;
+              //background: orchid;
+              transition:all 1s;
+
+
+              img{
+                height: 100%;
+                position:relative;
+                left:0;
+              }
+            }
+            .imgRight{
+              width:50%;
+              height: 100%;
+              float:left;
+              //background: orange;
+              overflow: hidden;
+              transition:all 1s;
+
+
+              img{
+                height: 100%;
+                position: relative;
+                //left:-170px;
+              }
+            }
+
+            .imgCenter{
+              //background: red;
+              position: absolute;
+              top:0;
+              left:85px;
+              img{
+                //width: 170px;
+                //height: 170px;
+                display: block;
+                border-radius: 50%;
+              }
+            }
+
+          }
+
+          //图片标题
+          .qyztitle{
+            width: 96.5%;
+            height: 17%;
+            background: rgba(0,0,0,0.2);
+            color:#fff;
+            position: absolute;
+            bottom:10px;
+            left:5px;
+            padding:5px;
+
+            p{
+              width:94%;/*要显示文字的宽度*/
+              overflow:hidden; /*超出的部分隐藏起来。*/
+              white-space:nowrap;/*不显示的地方用省略号...代替*/
+              text-overflow:ellipsis;/* 支持 IE */
+              text-align: center;
+              transform: rotateY(90deg);
+              transition: all 1s;
+            }
+
+          }
+
+          &:hover .qyztitle{
+            background: rgba(0,0,0,0.5);
+          }
+
+          &:hover p{
+            transform: rotateY(0deg);
+          }
+        }
+      }
+    }
+
+
+    //原生js示例
+    .ysjs{
+      padding:10px;
+      margin-bottom: 10px;
+      background: #fff;
+      h3{
+        color:#555;
+        padding-bottom: 20px;
+        //padding-top: 20px;
+        border-bottom: 1px solid $bgHoverColor;
+        //border-top: 1px solid $bgHoverColor;
+      }
+      ul{
+        //background: red;
+        overflow: hidden;
+
+        li{
+          float:left;
+          //height: 170px;
+          height: 260px;
+          position: relative;
+          overflow: hidden;
+          border:none;
+          padding: 5px;
+
+          a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #fff;
+            position: relative;
+            img{
+              display: block;
+              width:100%;
+              height: 100%;
+            }
+          }
+
+          .qyztitle{
+            position: absolute;
+            top:10px;
+            left:10px;
+            width:0;
+            height:0;
+            //background:rgba(255,255,255,0.1);
+            background:rgba(0,0,0,0.1);
+            transition: all 1s;
+          }
+
+          &:hover .qyztitle{
+            top: 0;
+            left: 0;
+            width:100%;
+            height:100%;
+            //background:rgba(255,255,255,0.5);
+            background:rgba(0,0,0,0.4);
+          }
+
+          //标题1
+          .qyztjs1{
+            position: absolute;
+            top: 100px;
+            left: 1000px;
+            font-size: 20px;
+            font-family: "Arial Black" SansSerif;
+            //color:rgba(74,74,74,0.9);
+            color:rgba(255,255,255,0.9);
+            transition: all 1s;
+          }
+
+          &:hover .qyztjs1{
+            top: 100px;
+            left: 10px;
+            text-indent:20px;
+            padding:10px 0;
+          }
+
+          //标题2
+          .qyztjs2{
+            position: absolute;
+            top: 160px;
+            left: -1000px;
+            font-size: 16px;
+            font-family: "Arial Black" SansSerif;
+            //color:rgba(237,177,38,0.9);
+            color: #beb7a7;
+            transition: all 1s;
+          }
+
+          &:hover .qyztjs2{
+            top: 160px;
+            left: 30px;
+            text-indent:20px;
+            padding:10px 0;
+          }
+
+
+          //标题3
+          .qyztjs3{
+            position: absolute;
+            //top: 180px;
+            right: 1000px;
+            bottom: -1000px;
+            font-size: 14px;
+            font-family: "Arial Black" SansSerif;
+            color: #beb7a7;
+            transition: all 1s;
+          }
+
+          &:hover .qyztjs3{
+            //top: 180px;
+            right: 30px;
+            bottom: 10px;
+            text-indent:20px;
+            padding:10px 0;
+          }
+
+
+
+        }
+
+
+      }
+    }
+
+
+
+
+  }
+  .contentRight{
+    float: right;
+    //background: orange;
+    overflow: hidden;
+
+    .contentRightRow{
+      margin-bottom: 10px;
+    }
+
+    .hotArticle{
+      margin-bottom: 10px;
+      background: #fff;
+      padding:10px;
+      h4{
+        border-bottom: 1px solid $mainColor;
+        padding:0 0 20px 0;
+      }
+      ul{
+        li{
+          padding:10px 0;
+          border:none;
+          a{
+            display: block;
+            color:#00a67c;
+            text-decoration: none;
+            width:94%;/*要显示文字的宽度*/
+            overflow:hidden; /*超出的部分隐藏起来。*/
+            white-space:nowrap;/*不显示的地方用省略号...代替*/
+            text-overflow:ellipsis;/* 支持 IE */
+
+            &:hover{
+              color:#007046;
+            }
+          }
+        }
+      }
+    }
+
+
+    //文章分类栏目
+    .fenlei{
+      margin-bottom: 10px;
+      background: #fff;
+      padding:10px;
+      h4{
+        border-bottom: 1px solid $mainColor;
+        padding:0 0 20px 0;
+        transition: all 0.3s;
+        &:hover{
+          transform:rotateX(60deg);
+        }
+      }
+      ul{
+
+        li:nth-of-type(1n){
+          float:left;
+          background: orchid;
+          color:#fff;
+
+          a {
+            width:100%;
+            height: 100%;
+          }
+        }
+        li:nth-of-type(2n){
+          float:right;
+          background: olivedrab;
+          color:#2b542c;
+        }
+
+
+
+      }
+    }
+
+
+
+
+  }
+}
+
+
+
+
+//左侧布局 结束
+
+
+
+/* 超小屏幕（手机，小于 768px） */
+/* 没有任何媒体查询相关的代码，因为这在 Bootstrap 中是默认的（还记得 Bootstrap 是移动设备优先的吗？） */
+@media screen and (min-width: 768px){
+  .carousel-caption {
+    right: 0;
+    left: 0;
+    padding-bottom: 9px;
+  }
+}
+
+
+
+@media screen and( max-width: 768px) {
+  //小于768时, 右侧不显示, 左侧百分百
+  .contentLeft{
+    width:100%;
+  }
+  //右侧内容隐藏
+  .contentRight{
+    display: none;
+  }
+
+  .content .contentLeft .newContent ul li:nth-of-type(1n){
+    width:100%;
+  }
+
+
+}
+
+
+/* 小屏幕（平板，大于等于 768px） */
+
+
+
+
+
+
+
+
+
+@media screen and( min-width: 768px) {
+  //左侧内容显示
+  .contentLeft{
+    width:69%;
+  }
+
+  //右侧内容显示
+  .contentRight{
+    display: block;
+  }
+
+
+}
+
+//小于等于992px
+@media screen and( max-width: 992px) {
+  //小于992时, 右侧不显示, 左侧百分百
+  .contentLeft{
+    width:100%;
+  }
+  //右侧内容隐藏
+  .contentRight{
+    display: none;
+  }
+
+  //公告栏的信息靠左显示
+  .notice ul li {
+    background: url(/images/volume.png) no-repeat 10px 12px;
+    padding-left: 3%;
+  }
+
+
+
+}
+
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media screen and( min-width: 992px) {
+
+}
+
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media screen and( min-width: 1200px) {
+
+}
+
+
+
+
+
+
+
+
+
 
 a{
   color: #00B7FF;
