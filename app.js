@@ -5,9 +5,16 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+//前台路由文件引入
 var index = require('./routes/index');
 var article = require('./routes/article');
 var users = require('./routes/users');
+
+
+
+//后台路由文件引入
+var adminIndex = require('./routes/admin/index');//后台首页路由
+var adminArticle = require('./routes/admin/article');//文章路由
 
 var app = express();
 
@@ -30,9 +37,18 @@ app.use(require('node-sass-middleware')({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+//使用前台路由解析
 app.use('/', index);
 app.use('/article', article);
 app.use('/users', users);
+
+
+//使用后台路由解析 adminIndex
+app.use('/admin', adminIndex);//后台首页
+app.use('/admin/article', adminArticle);//文章控制器
+// app.use('/admin/article', adminArticle);//文章控制器
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

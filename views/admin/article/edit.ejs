@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台</title>
+
+</head>
+<body>
+    <h1>admin</h1>
+
+    <form action="/admin/article/editData" method="post">
+        <h1>文章新增</h1>
+        <input type="hidden" name="_id" value="<%= articleInfo._id %>">
+        <p>标题: <input type="text" name="title" value="<%= articleInfo.title %>"></p>
+        <p>描述: <input type="text" name="description" value="<%= articleInfo.description %>"></p>
+        <p>作者: <input type="text" name="author" value="<%= articleInfo.author %>"></p>
+        <p>内容: <textarea name="content" id="" cols="30" rows="10"><%= articleInfo.content %></textarea></p>
+        <p>标签: <input type="text" name="articleTag" value="<%= articleInfo.articleTag %>"></p>
+        <p><input type="submit" value="提交"></p>
+    </form>
+
+    <hr/>
+
+
+
+</body>
+</html>
