@@ -5,9 +5,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+// var mongoose = require('mongoose');//引入mongoose模块
+// mongoose.connect('mongodb://localhost/article');//连接本地mongodb数据库名:article
+
+
 //前台路由文件引入
-var index = require('./routes/index');
-var article = require('./routes/article');
+var index = require('./routes/home/index');
+var article = require('./routes/home/article');
 var users = require('./routes/users');
 
 
@@ -15,6 +19,10 @@ var users = require('./routes/users');
 //后台路由文件引入
 var adminIndex = require('./routes/admin/index');//后台首页路由
 var adminArticle = require('./routes/admin/article');//文章路由
+var adminCategory = require('./routes/admin/category');//文章路由
+
+
+
 
 var app = express();
 
@@ -46,7 +54,7 @@ app.use('/users', users);
 //使用后台路由解析 adminIndex
 app.use('/admin', adminIndex);//后台首页
 app.use('/admin/article', adminArticle);//文章控制器
-// app.use('/admin/article', adminArticle);//文章控制器
+app.use('/admin/category', adminCategory);//文章控制器
 
 
 

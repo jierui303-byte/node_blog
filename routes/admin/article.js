@@ -3,6 +3,7 @@ var router = express.Router();
 
 var mongoose = require('mongoose');//引入mongoose模块
 
+//每次连接数据库获取到的对象不一样,这样才不会出现打开未关闭的已连接
 mongoose.connect('mongodb://localhost/article');//连接本地mongodb数据库名:article
 // var db = mongoose.connection;
 // db.on('error', console.error.bind(console, 'connection error:'));//判断是否连接失败
@@ -11,6 +12,7 @@ mongoose.connect('mongodb://localhost/article');//连接本地mongodb数据库�
 //创建数据模型,也就是定义数据库字段及字段类型
 var userSchema = new mongoose.Schema({
     title:{type: String, unique: true}, //标题
+    categoryId:String, //类目id
     description:String, //文章描述
     author:String, //作者
     addTime:String, //创建时间
@@ -28,7 +30,29 @@ router.get('/', function(req, res, next) {
 
 //文章新增页
 router.get('/add', function(req, res, next) {
-    res.render('admin/article/add', { title: '文章新增'});
+    //从数据库查询类目信息,注入模板
+    var categoryCon = mongoose.createConnection('mongodb://localhost/category');
+    //创建数据模型,也就是定义数据库字段及字段类型
+    var categorySchema = new mongoose.Schema({
+        categoryName:String, //类目名称
+        addTime:String, //新增时间
+        updateTime:String //更新时间
+    }, {collection: "category"});//声明表名
+    var Category = categoryCon.model("category", categorySchema);
+
+    //查询所有记录的age和title字段
+    Category.find({},{
+        categoryName:true,
+        addTime:true,
+        updateTime:true
+    },function(err,docs){
+        if(!err){
+            console.log(docs);//此时打印出来的是一个对象数组
+            res.render('admin/article/add', { title: '文章新增', categoryLists:docs});
+        }else{
+            console.log(err);
+        }
+    });
 });
 
 
@@ -36,8 +60,10 @@ router.get('/add', function(req, res, next) {
 //这个路由是进行数据写入的, 新增和修改都用此路由
 //修改信息之前先判断该条数据是否存在, 存在则进行修改,不存在则进行新增
 router.post('/addData', function(req, res, next) {
+    console.log(req.body);
     //以下是新增操作
     var title = req.body.title; //标题
+    var categoryId = req.body.categoryId; //类目id
     var description = req.body.description; //文章描述
     var author = req.body.author; //作者
     var addTime = getDate(); //创建时间
@@ -62,6 +88,7 @@ router.post('/addData', function(req, res, next) {
         //添加数据到数据库
         var ArticleObj = new Article({
             title:title, //标题
+            categoryId:categoryId, //类目
             description:description, //文章描述
             author:author, //作者
             addTime:addTime, //创建时间
@@ -72,6 +99,7 @@ router.post('/addData', function(req, res, next) {
             articleTag:articleTag //文章标签
         });
 
+        console.log(categoryId);
 
         //保存数据
         ArticleObj.save(function(err, doc){
@@ -95,11 +123,14 @@ router.get('/edit/id/:id', function(req, res, next) {
     var _id = mongoose.Types.ObjectId(req.params.id);
     console.log(_id);
 
+    var data = null;
+
     //通过_id查询该条数据
     var Article = mongoose.model("article", userSchema);
     //查询_id=_id的记录的title和description等字段
     Article.find({_id:_id},{
         title:true,
+        categoryId:true,
         description:true,
         author:true,
         content:true,
@@ -109,11 +140,37 @@ router.get('/edit/id/:id', function(req, res, next) {
     },function(err,docs){
         if(!err){
             console.log(docs);
-            res.render('admin/article/edit', { title: '文章修改', articleInfo:docs[0] });
+            data = docs[0];
         }else{
             console.log(err);
         }
     });
+
+
+    //从数据库查询类目信息,注入模板
+    var categoryCon = mongoose.createConnection('mongodb://localhost/category');
+    //创建数据模型,也就是定义数据库字段及字段类型
+    var categorySchema = new mongoose.Schema({
+        categoryName:String, //类目名称
+        addTime:String, //新增时间
+        updateTime:String //更新时间
+    }, {collection: "category"});//声明表名
+    var Category = categoryCon.model("category", categorySchema);
+
+    var categoryLists = null;
+    //查询所有记录的age和title字段
+    Category.find({},{
+        categoryName:true,
+    },function(err,docs){
+        if(!err){
+            console.log(docs);//此时打印出来的是一个对象数组
+            categoryLists = docs;
+            res.render('admin/article/edit', { title: '文章修改', articleInfo:data, categoryLists:categoryLists });
+        }else{
+            console.log(err);
+        }
+    });
+
 });
 
 
@@ -199,6 +256,7 @@ router.get('/list', function(req, res, next) {
     //查询所有记录的age和title字段
     Article.find({},{
         title:true,
+        categoryId:true,
         description:true,
         author:true,
         content:true,
@@ -208,7 +266,6 @@ router.get('/list', function(req, res, next) {
     },function(err,docs){
         if(!err){
             // console.log(docs);//此时打印出来的是一个对象数组
-            // db.close();
             res.render('admin/article/list', { title: 'admin/article/list', articleLists: docs});
         }else{
             console.log(err);

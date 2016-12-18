@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台</title>
+
+</head>
+<body>
+    <h1>admin</h1>
+
+    <form action="/admin/category/editData" method="post">
+        <h1>文章新增</h1>
+        <input type="hidden" name="_id" value="<%= articleInfo._id %>">
+        <p>标题: <input type="text" name="categoryName" value="<%= articleInfo.categoryName %>"></p>
+        <p><input type="submit" value="提交"></p>
+    </form>
+
+    <hr/>
+
+
+
+</body>
+</html>

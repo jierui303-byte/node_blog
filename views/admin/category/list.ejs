@@ -16,14 +16,9 @@
 <table border="1">
     <tr>
         <td>id</td>
-        <td>类目</td>
-        <td>标题</td>
-        <td>描述</td>
-        <td>作者</td>
-        <td>内容</td>
+        <td>类目名称</td>
         <td>创建时间</td>
         <td>更新时间</td>
-        <td>Tag标签</td>
         <td>修改</td>
         <td>删除</td>
     </tr>
@@ -31,19 +26,14 @@
     <% articleLists.forEach(function(article){ %>
     <tr>
         <td><%= article._id %></td>
-        <td><%= article.categoryId %></td>
-        <td><%= article.title %></td>
-        <td><%= article.description %></td>
-        <td><%= article.author %></td>
-        <td><%= article.content %></td>
-        <td><%= article.articleTag %></td>
+        <td><%= article.categoryName %></td>
         <td><%= article.addTime %></td>
         <td><%= article.updateTime %></td>
         <td>
-            <a href="/admin/article/edit/id/<%= article._id %>">修改</a>
+            <a href="/admin/category/edit/id/<%= article._id %>">修改</a>
         </td>
         <td>
-            <a href="/admin/article/del/id/<%= article._id %>">删除</a>
+            <a href="/admin/category/del/id/<%= article._id %>">删除</a>
         </td>
     </tr>
     <% }) %>

@@ -60,6 +60,14 @@ header{
 
   }
 
+  //.musicDiv{
+  //  background: pink;
+  //  height: 100%;
+  //  padding:30px;
+  //}
+
+
+  //广告图片一
   .gg1{
     display: block;
     //margin: 25px auto;
@@ -125,7 +133,7 @@ header{
         white-space:nowrap;/*不显示的地方用省略号...代替*/
         text-overflow:ellipsis;/* 支持 IE */
 
-        &:hover a{
+        &:hover{
           text-decoration: none;
         }
       };
@@ -661,8 +669,278 @@ header{
 
 
 
+//文章列表页样式开始
+.contentMB{
+  padding:0;
+  .breadcrumb{
+    border-radius: 0;
+    border-bottom:1px solid $mainColor;
+    margin-bottom: 0;
+    a{
+      color:#00a67c;
+
+      .glyphicon-home:before {
+        display: inline-block;
+        margin-right: 5px;
+      }
+
+      &:hover{
+        color:#007046;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.articleContent{
+  background: #fff;
+  h2{
+    a{
+      display: block;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 400;
+      color:#444;
+      padding-top: 10px;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+
+  .articleLabel{
+    width: 60%;
+    overflow: hidden;
+    margin: 0 auto;
+    li{
+      float:left;
+      //background: red;
+      text-align: center;
+      border-radius: 0;
+      padding:10px 0;
+      border:none;
+
+      a{
+        color:#00a67c;
+        .glyphicon{
+          margin-right: 5px;
+        }
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+
+  .contents{
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    p{
+      line-height: 30px;
+      padding:10px;
+      text-indent: 2rem;
+    }
+  }
+}
+
+
+.NextPrev{
+  height: 60px;
+  background: #fff;
+  line-height: 60px;
+  .prevRight, .nextLeft{
+    a{
+      color:#007046;
+      &:hover{
+        text-decoration: none;
+        color:#00a67c;
+      }
+    }
+  }
+  .prevRight{
+    height: 100%;
+    a{
+      display: block;
+      text-align: right;
+      width:100%;
+      height: 100%;
+    }
+  }
+}
+
+
+//文章列表页样式结束
+
+
+
 //左侧布局 结束
 
+
+//评论
+.fbpl{
+  background: #fff;
+  padding:10px;
+}
+
+
+
+
+
+//文章列表页 开始
+.articleList{
+  ul{
+    margin-bottom: 0;
+
+    li{
+      margin-bottom: 10px;
+      border:none;
+
+      &:hover img{
+        transform: scale(1.1);
+      }
+
+      h3{
+        a{
+          display: block;
+          width:100%;/*要显示文字的宽度*/
+          overflow:hidden; /*超出的部分隐藏起来。*/
+          white-space:nowrap;/*不显示的地方用省略号...代替*/
+          text-overflow:ellipsis;/* 支持 IE */
+          //background: orange;
+          font-size: 20px;
+          color:#00a67c;
+          &:hover{
+            color:#007046;
+            text-decoration: none;
+          }
+        }
+
+        }
+
+      }
+
+    li:last-of-type{
+      margin-bottom: 0;
+    }
+    .articleListB{
+      margin-bottom: 10px;
+      padding-top: 10px;
+
+      .articleListBImg{
+        //width: 26.333333%;
+        a{
+          display: block;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          background: olive;
+
+          img{
+            width: 100%;
+            transition: all 0.3s;
+          }
+        }
+      }
+
+      .articleListBTitle{
+        width:66%;
+        padding-left: 0;
+        p{
+          text-indent: 2rem;
+          line-height: 22px;
+          color:#777;
+          .continue{
+            a{
+              color:#00a67c;
+              &:hover{
+                color:#007046;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+        .articleLabel{
+          width: 100%;
+          overflow: hidden;
+          margin: 0 auto;
+          li{
+            float:left;
+            text-align: center;
+            border-radius: 0;
+            padding:10px 0;
+            border:none;
+
+            a{
+              color:#9e9e9e;
+              .glyphicon{
+                margin-right: 5px;
+              }
+              &:hover{
+                text-decoration: none;
+                color:#00a67c;
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+
+
+  }
+}
+//文章列表页 结束
+
+
+//文章分页
+.pagers{
+  background: #fff;
+  margin-bottom: 10px;
+  border-top: 1px solid rgba(157, 157, 157, 0.1);
+  .pager{
+    .pagination{
+      margin:10px 5px;
+      float:right;
+      li{
+        .active{
+          background: #4CAF50;
+          color:#fff;
+        }
+      }
+      li>a{
+        background: #eee;
+        color:#000;
+        border-radius: 0;
+        margin:2px;
+        &:hover{
+          background: #388E3C;
+          color:#fff;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+//网站底部 开始
+footer{
+  background: #555;
+  border-top: 1px solid #00a67c;
+  padding: 30px 15px;
+  .row{
+    text-align: center;
+    margin:10px 0;
+    p{
+      color:#4caf50;
+    }
+  }
+}
+//网站底部 结束
 
 
 /* 超小屏幕（手机，小于 768px） */

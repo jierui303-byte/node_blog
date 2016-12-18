@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/bootstrap/css/bootstrap.css' />
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src='/bootstrap/js/bootstrap.js'></script>
+    <script src='/javascripts/TweenMax.min.js'></script>
+    <script src='/javascripts/index.js'></script>
+
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <!--头部 开始-->
+    <header class="container-fluid">
+      <!--logo部分 开始-->
+      <div class="row">
+        <div class="col-sm-4 col-md-4">
+          <a href="#" class="logo"><img src="/images/logo.png" alt="" class="img-thumbnail"></a>
+        </div>
+        <div class="col-sm-8 col-md-4 hidden-xs">
+          <div class="input-group">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Go!</button>
+            </span>
+          </div><!-- /input-group -->
+        </div>
+        <div class="col-md-4 hidden-xs hidden-sm">
+          <a href="#" class="gg1"><img src="/images/gg001.png" alt=""></a>
+        </div>
+      </div>
+      <!--logo部分 结束-->
+    </header>
+    <!--头部 开始-->
+
+    <!--导航条 开始-->
+    <nav class="navbar navbar-default navigator" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">首页</a></li>
+            <li><a href="#">企业主题</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">博客主题 <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <!--导航条 结束-->
+
+
+
+    <!--公告信息 开始-->
+    <div class="notice">
+      <ul class="list-group">
+        <li class="list-group-item"><a href="#">高效、专业、符合SEO优化wordpress建站，首选翠竹林wordpress主题，大气，简洁，清新。点击：翠竹林wordpress主题 QQ：458940846，985300418</a></li>
+        <li class="list-group-item"><a href="#">高效、专业、符合SEO优化wordpress建站，首选翠竹林wordpress主题，大气，简洁，清新。点击：翠竹林wordpress主题 QQ：458940846，985300418</a></li>
+        <li class="list-group-item"><a href="#">高效、专业、符合SEO优化wordpress建站，首选翠竹林wordpress主题，大气，简洁，清新。点击：翠竹林wordpress主题 QQ：458940846，985300418</a></li>
+      </ul>
+    </div>
+
+    <!--公告信息 结束-->
+
+
+
+    <!--左侧布局 开始-->
+    <div class="container content">
+      <div class="row">
+        <div class="col-lg-8 col-lg-69 col-sm-12 col-xs-12 contentLeft">
+          <!--面包屑导航 开始-->
+          <div class="row contentMB">
+            <ol class="breadcrumb">
+              <li><a href="#"><i class="glyphicon glyphicon-home"></i>Home</a></li>
+              <li><a href="#">Library</a></li>
+              <li class="active">Data</li>
+            </ol>
+          </div>
+          <!--面包屑导航 结束-->
+
+          <!--文章内容页 开始-->
+          <div class="row articleContent">
+            <!--<h2><a href="#">wordpress教程-文章部分内容登陆后可见</a></h2>-->
+            <h2><a href="#"><%= articleInfo.title %></a></h2>
+            <ul class="list-group articleLabel">
+              <li class="list-group-item col-lg-3"><a href="#"><i class="glyphicon glyphicon-user"></i>小军</a></li>
+              <li class="list-group-item col-lg-3"><a href="#"><i class="glyphicon glyphicon-time"></i>2016-9-26</a></li>
+              <li class="list-group-item col-lg-3"><a href="#"><i class="glyphicon glyphicon-eye-open"></i>579次浏览</a></li>
+              <li class="list-group-item col-lg-3"><a href="#"><i class="glyphicon glyphicon-comment"></i>0个评论</a></li>
+            </ul>
+            <div class="contents">
+              <p>
+                <%= articleInfo.content %>
+              </p>
+            </div>
+          </div>
+          <!--文章内容页 结束-->
+
+
+          <!--上/下一页 开始-->
+          <div class="row NextPrev">
+            <div class="col-lg-6 nextLeft">
+              <a href="#"><i class="glyphicon glyphicon-chevron-left"></i> wordpress使用教程-如何设置置顶文章</a>
+            </div>
+            <div class="col-lg-6 prevRight">
+              <a href="#">wordpress使用教程-如何设置置顶文章<i class="glyphicon glyphicon-chevron-right"></i></a>
+            </div>
+          </div>
+          <!--上/下一页 结束-->
+
+
+          <!--发表评论 开始-->
+          <div class="row fbpl">
+            <!--<h4>发表我的评论</h4>-->
+            <!--<form action="" method="post">-->
+              <!--<textarea name="pinglun" id="" cols="80" rows="10">说点什么吧...</textarea>-->
+              <!--<br>-->
+              <!--<input type="submit" value="提交评论">-->
+            <!--</form>-->
+            <!-- UY BEGIN -->
+            <div id="uyan_frame"></div>
+            <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
+            <!-- UY END -->
+          </div>
+          <!--发表评论 结束-->
+
+
+          <!--最新内容 开始-->
+          <div class="row newContent">
+            <h3>最新内容</h3>
+            <ul class="list-group">
+              <li class="list-group-item col-lg-6">
+                <i class="glyphicon glyphicon-minus"></i>
+                <a href="#">翠竹林“wordpress主题”关键词必应排名第一页记录</a>
+              </li>
+              <li class="list-group-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <i class="glyphicon glyphicon-minus"></i>
+                <a href="#">wordpress使用教程-如何设置顶部菜单导航栏</a>
+              </li>
+              <li class="list-group-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <i class="glyphicon glyphicon-minus"></i>
+                <a href="#">翠竹林官网品牌词有两个页面进入百度第一页</a>
+              </li>
+              <li class="list-group-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <i class="glyphicon glyphicon-minus"></i>
+                <a href="#">wordpress cms主题是什么意思自媒体个人博客</a>
+              </li>
+              <li class="list-group-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <i class="glyphicon glyphicon-minus"></i>
+                <a href="#">wordpress模板panda使用指南</a>
+              </li>
+              <li class="list-group-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <i class="glyphicon glyphicon-minus"></i>
+                <a href="#">wordpress生成的url是中文如何解决</a>
+              </li>
+              <li class="list-group-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <i class="glyphicon glyphicon-minus"></i>
+                <a href="#">翠竹林品牌词百度相关搜索数据变化记录</a>
+              </li>
+              <li class="list-group-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <i class="glyphicon glyphicon-minus"></i>
+                <a href="#">wordpress教程-文章部分内容登陆后可见</a>
+              </li>
+              <li class="list-group-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <i class="glyphicon glyphicon-minus"></i>
+                <a href="#">wordpress使用教程-如何设置置顶文章</a>
+              </li>
+              <li class="list-group-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <i class="glyphicon glyphicon-minus"></i>
+                <a href="#">黑科技响应式自媒体杂志wordpress个人反反复复凤飞飞博客主题：Panda</a>
+              </li>
+            </ul>
+          </div>
+          <!--最新内容 结束-->
+
+
+          <!--猜你还喜欢 开始-->
+          <!--练习作品集锦 开始-->
+          <div class="row qyzt">
+            <h3>练习作品集锦</h3>
+            <ul class="list-group">
+              <li class="list-group-item col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                <a href="#">
+                  <img src="/images/timg.jpeg" alt="" class="img-responsive">
+                </a>
+                <div class="qyztitle">
+                  <p>标题时好时坏</p>
+                </div>
+
+              </li>
+              <li class="list-group-item col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                <a href="#">
+                  <img src="/images/t1.jpg" alt="" class="img-responsive">
+                </a>
+                <div class="qyztitle">
+                  <p>标题时好时坏</p>
+                </div>
+              </li>
+              <li class="list-group-item col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                <a href="#">
+                  <img src="/images/t2.jpg" alt="" class="img-responsive">
+                </a>
+                <div class="qyztitle">
+                  <p>标题时好时坏</p>
+                </div>
+              </li>
+              <li class="list-group-item col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                <a href="#">
+                  <img src="/images/t3.jpg" alt="" class="img-responsive">
+                </a>
+                <div class="qyztitle">
+                  <p>标题时好时坏标题时好时坏标标题时好时坏标题时好时坏标题时好时坏题时好时坏标题时好时坏标题时好时坏</p>
+                </div>
+              </li>
+              <li class="list-group-item col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                <a href="#">
+                  <img src="/images/t6.jpg" alt="" class="img-responsive">
+                </a>
+                <div class="qyztitle">
+                  <p>标题时好时坏</p>
+                </div>
+              </li>
+              <li class="list-group-item col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                <a href="#">
+                  <img src="/images/t5.jpg" alt="" class="img-responsive">
+                </a>
+                <div class="qyztitle">
+                  <p>标题时好时坏</p>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+          <!--练习作品集锦 结束-->
+          <!--猜你还喜欢 结束-->
+
+
+
+          <!--tab切换页 开始-->
+          <!-- Nav tabs -->
+          <div class="row">
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+              <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+              <li role="presentation"><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
+              <li role="presentation"><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="home">home</div>
+              <div role="tabpanel" class="tab-pane" id="profile">profile</div>
+              <div role="tabpanel" class="tab-pane" id="messages">messages</div>
+              <div role="tabpanel" class="tab-pane" id="settings">settings</div>
+            </div>
+
+          </div>
+
+
+          <!--tab切换页 结束-->
+
+
+
+
+          <!--原生js示例 开始-->
+
+          <!--
+          nodeBlog目录下
+          /Users/mac/Desktop/nodeBlog/public/stylesheets
+          进入stylesheets目录下, 就可以执行sass编译scss文件了,
+          sass style.scss style.css
+          使用翻转特效
+
+          使用svg画边框,js控制
+          -->
+          <!--原生js示例 结束-->
+
+        </div>
+        <!--<div class="col-lg-4 col-lg-30 contentRight hidden-sm hidden-xs">-->
+        <div class="col-lg-4 col-lg-30 contentRight hidden-xs">
+
+          <!--广告列表 开始-->
+          <div class="row contentRightRow">
+            <a href="#">
+              <img src="/images/peixun.jpg" alt="" class="img-responsive">
+            </a>
+          </div>
+          <div class="row contentRightRow">
+            <a href="#">
+              <img src="/images/gg002.jpg" alt="" class="img-responsive">
+            </a>
+          </div>
+          <!--广告列表 结束-->
+
+          <!--热门文章 开始-->
+          <div class="row hotArticle">
+            <h4>热门文章</h4>
+            <ul class="list-group">
+              <li class="list-group-item"><a href="#">wordpress安装教程：十分钟学会安装wordpress</a></li>
+              <li class="list-group-item"><a href="#">10个优秀的wordpress主机空间推荐</a></li>
+              <li class="list-group-item"><a href="#">wordpress使用教程-如何设置顶部菜单导航栏</a></li>
+              <li class="list-group-item"><a href="#">wordpress个人博客SEO第三步：优化网站URL</a></li>
+              <li class="list-group-item"><a href="#">wordpress使用教程-如何安装wordpress主题</a></li>
+              <li class="list-group-item"><a href="#">使用WP Super Cache插件为wordpress提速</a></li>
+              <li class="list-group-item"><a href="#">wordpress固定链接设置之后404解决方法</a></li>
+              <li class="list-group-item"><a href="#">wordpress数据库缓存插件DB Cache Reloaded没有激活解决方法</a></li>
+              <li class="list-group-item"><a href="#">wordpress如何屏蔽过滤垃圾评论</a></li>
+              <li class="list-group-item"><a href="#">翠竹林wordpress主题网正式开放robots.txt允许蜘蛛抓取</a></li>
+            </ul>
+          </div>
+          <!--热门文章 结束-->
+
+
+
+          <!--分类目录 开始-->
+          <div class="row fenlei">
+            <h4>分类目录</h4>
+            <ul class="list-group">
+              <li class="list-group-item col-lg-6">
+                <a href="#" class="stage">php基础</a>
+              </li>
+              <li class="list-group-item col-lg-6">
+                <a href="#" class="stage">php基础</a>
+              </li>
+              <li class="list-group-item col-lg-6">
+                <a href="#" class="stage">php基础</a>
+              </li>
+              <li class="list-group-item col-lg-6">
+                <a href="#" class="stage">php基础</a>
+              </li>
+              <li class="list-group-item col-lg-6">
+                wordpress
+              </li>
+              <li class="list-group-item col-lg-6">CMS主题</li>
+              <li class="list-group-item col-lg-6">seo</li>
+              <li class="list-group-item col-lg-6">wordpress企业主题</li>
+              <li class="list-group-item col-lg-6">wordpress博客主题</li>
+              <li class="list-group-item col-lg-6">wordpress开发</li>
+              <li class="list-group-item col-lg-6">wordpress插件</li>
+              <li class="list-group-item col-lg-6">wordpress教程</li>
+            </ul>
+          </div>
+          <!--分类目录 结束-->
+
+
+
+          <!--文章推荐 开始-->
+          <!--文章推荐 结束-->
+
+
+
+          <!--热门标签 开始-->
+          <!--热门标签 结束-->
+
+
+          <!--访问记录 开始-->
+          <!--访问记录 结束-->
+
+
+          <!--友情外链 开始-->
+          <!--友情外链 结束-->
+
+          <!--
+            音乐播放
+            视频播放
+
+            js特效案例
+            canvas特效案例
+            svg特效案例
+            jquery特效案例
+            博文列表
+            博文按日期统计数量
+            app的ios和Android的demo, 其中再包含两个操控手机设备端口的应用
+
+
+          -->
+
+          <p>sssssssssssssssssss ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
+        </div>
+      </div>
+    </div>
+    <!--右侧布局 结束-->
+
+  </body>
+</html>
