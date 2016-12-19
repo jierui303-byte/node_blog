@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 
     <title><%= title %></title>
+
     <link rel='stylesheet' href='/bootstrap/css/bootstrap.css' />
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-    <script src='/bootstrap/js/bootstrap.js'></script>
+    <!--<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>-->
+    <!--<script src='/bootstrap/js/bootstrap.js'></script>-->
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
     <script src='/javascripts/TweenMax.min.js'></script>
     <script src='/javascripts/index.js'></script>
+
 
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
@@ -453,20 +459,20 @@
 
           <!--tab切换页 开始-->
           <!-- Nav tabs -->
-          <div class="row">
+          <div class="row" id="myTabs">
             <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
-              <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
-              <li role="presentation"><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
-              <li role="presentation"><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+              <li role="presentation" class="active"><a href="#home1" role="tab" data-toggle="tab">Home</a></li>
+              <li role="presentation"><a href="#profile1" role="tab" data-toggle="tab">Profile</a></li>
+              <li role="presentation"><a href="#messages1" role="tab" data-toggle="tab">Messages</a></li>
+              <li role="presentation"><a href="#settings1" role="tab" data-toggle="tab">Settings</a></li>
             </ul>
 
             <!-- Tab panes -->
-            <div class="tab-content">
-              <div role="tabpanel" class="tab-pane active" id="home">home</div>
-              <div role="tabpanel" class="tab-pane" id="profile">profile</div>
-              <div role="tabpanel" class="tab-pane" id="messages">messages</div>
-              <div role="tabpanel" class="tab-pane" id="settings">settings</div>
+            <div class="tab-content" id="myTabContents">
+              <div role="tabpanel" class="tab-pane active" id="home1">home</div>
+              <div role="tabpanel" class="tab-pane" id="profile1">profile</div>
+              <div role="tabpanel" class="tab-pane" id="messages1">messages</div>
+              <div role="tabpanel" class="tab-pane" id="settings1">settings</div>
             </div>
 
           </div>
@@ -535,13 +541,13 @@
                 <a href="/article/list/0" class="stage">php基础</a>
               </li>
               <li class="list-group-item col-lg-6">
-                <a href="/article/list/0" class="stage">php基础</a>
+                <a href="/article/list/0" class="stage">C++</a>
               </li>
               <li class="list-group-item col-lg-6">
-                <a href="/article/list/0" class="stage">php基础</a>
+                <a href="/article/list/0" class="stage">Java</a>
               </li>
               <li class="list-group-item col-lg-6">
-                <a href="/article/list/0" class="stage">php基础</a>
+                <a href="/article/list/0" class="stage">Android</a>
               </li>
               <li class="list-group-item col-lg-6">
                 wordpress
@@ -559,13 +565,255 @@
 
 
 
+          <!--tab切换页 开始-->
+          <!-- Nav tabs -->
+          <div class="row Tabqhy">
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active">
+                <a href="#home" data-toggle="tab">自强学堂</a>
+              </li>
+              <li><a href="#ios" data-toggle="tab">iOS</a></li>
+              <li class="dropdown">
+                <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Java
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                  <li><a href="#jmeter" tabindex="-1" data-toggle="tab">jmeter</a></li>
+                  <li><a href="#ejb" tabindex="-1" data-toggle="tab">ejb</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+              <div class="tab-pane fade in active" id="home">
+                <!--热门文章 开始-->
+                <div class="row hotArticle">
+                  <ul class="list-group">
+                    <li class="list-group-item"><a href="#">wordpress安装教程：十分钟学会安装wordpress</a></li>
+                    <li class="list-group-item"><a href="#">10个优秀的wordpress主机空间推荐</a></li>
+                    <li class="list-group-item"><a href="#">wordpress使用教程-如何设置顶部菜单导航栏</a></li>
+                    <li class="list-group-item"><a href="#">wordpress个人博客SEO第三步：优化网站URL</a></li>
+                    <li class="list-group-item"><a href="#">wordpress使用教程-如何安装wordpress主题</a></li>
+                    <li class="list-group-item"><a href="#">使用WP Super Cache插件为wordpress提速</a></li>
+                    <li class="list-group-item"><a href="#">wordpress固定链接设置之后404解决方法</a></li>
+                    <li class="list-group-item"><a href="#">wordpress数据库缓存插件DB Cache Reloaded没有激活解决方法</a></li>
+                    <li class="list-group-item"><a href="#">wordpress如何屏蔽过滤垃圾评论</a></li>
+                    <li class="list-group-item"><a href="#">翠竹林wordpress主题网正式开放robots.txt允许蜘蛛抓取</a></li>
+                  </ul>
+                </div>
+                <!--热门文章 结束-->
+              </div>
+              <div class="tab-pane fade" id="ios">
+                <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple
+                  TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
+              </div>
+              <div class="tab-pane fade" id="jmeter">
+                <p>jMeter 是一款开源的测试软件。它是 100% 纯 Java 应用程序，用于负载和性能测试。</p>
+                <p>自强学堂是一个提供最新的web技术的站点，我们将将国外的精华教程收集到国内, 让每个人享受平等学习的机会!我们的目标是只要你坚持来自强学堂,我们提供的教程就能让你变得更强!</p>
+              </div>
+              <div class="tab-pane fade" id="ejb">
+                <p>Enterprise Java Beans（EJB）是一个创建高度可扩展性和强大企业级应用程序的开发架构，部署在兼容应用程序服务器（比如 JBOSS、Web Logic 等）的 J2EE 上。</p>
+              </div>
+            </div>
+          </div>
+          <!--tab切换页 结束-->
+
+
+
+
+
           <!--文章推荐 开始-->
+          <div class="row tjzt">
+            <h4>推荐主题</h4>
+            <ul class="list-group">
+              <li class="list-group-item tjztWLi">
+                <ul class="media-list">
+                  <li class="media">
+                    <a class="media-left col-lg-4" href="#">
+                      <img src="images/peixun.jpg" alt="...">
+                    </a>
+                    <div class="media-body col-lg-8 tjztNLiDiv">
+                      <h4 class="media-heading tjztNLiH4">
+                        <a href="#">
+                          蓝白色两栏响应式免费wordpress博客主题：CUI 1.0（更新至2.0）
+                        </a>
+                      </h4>
+                      <p><span>2016-04-16</span><span>50评论</span></p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="list-group-item tjztWLi">
+                <ul class="media-list">
+                  <li class="media">
+                    <a class="media-left col-lg-4" href="#">
+                      <img src="images/t1.jpg" alt="...">
+                    </a>
+                    <div class="media-body col-lg-8 tjztNLiDiv">
+                      <h4 class="media-heading tjztNLiH4">
+                        <a href="#">
+                          蓝白色两栏响应式免费wordpress博客主题：CUI 1.0（更新至2.0）
+                        </a>
+                      </h4>
+                      <p><span>2016-04-16</span><span>50评论</span></p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="list-group-item tjztWLi">
+                <ul class="media-list">
+                  <li class="media">
+                    <a class="media-left col-lg-4" href="#">
+                      <img src="images/t2.jpg" alt="...">
+                    </a>
+                    <div class="media-body col-lg-8 tjztNLiDiv">
+                      <h4 class="media-heading tjztNLiH4">
+                        <a href="#">
+                          蓝白色两栏响应式免费wordpress博客主题：CUI 1.0（更新至2.0）
+                        </a>
+                      </h4>
+                      <p><span>2016-04-16</span><span>50评论</span></p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="list-group-item tjztWLi">
+                <ul class="media-list">
+                  <li class="media">
+                    <a class="media-left col-lg-4" href="#">
+                      <img src="images/t3.jpg" alt="...">
+                    </a>
+                    <div class="media-body col-lg-8 tjztNLiDiv">
+                      <h4 class="media-heading tjztNLiH4">
+                        <a href="#">
+                          蓝白色两栏响应式免费wordpress博客主题：CUI 1.0（更新至2.0）
+                        </a>
+                      </h4>
+                      <p><span>2016-04-16</span><span>50评论</span></p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="list-group-item tjztWLi">
+                <ul class="media-list">
+                  <li class="media">
+                    <a class="media-left col-lg-4" href="#">
+                      <img src="images/t4.jpg" alt="...">
+                    </a>
+                    <div class="media-body col-lg-8 tjztNLiDiv">
+                      <h4 class="media-heading tjztNLiH4">
+                        <a href="#">
+                          蓝白色两栏响应式免费wordpress博客主题：CUI 1.0（更新至2.0）
+                        </a>
+                      </h4>
+                      <p><span>2016-04-16</span><span>50评论</span></p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="list-group-item tjztWLi">
+                <ul class="media-list">
+                  <li class="media">
+                    <a class="media-left col-lg-4" href="#">
+                      <img src="images/t5.jpg" alt="...">
+                    </a>
+                    <div class="media-body col-lg-8 tjztNLiDiv">
+                      <h4 class="media-heading tjztNLiH4">
+                        <a href="#">
+                          蓝白色两栏响应式免费wordpress博客主题：CUI 1.0（更新至2.0）
+                        </a>
+                      </h4>
+                      <p><span>2016-04-16</span><span>50评论</span></p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
           <!--文章推荐 结束-->
 
 
 
           <!--热门标签 开始-->
+          <div class="row rmbq">
+            <h4>热门标签</h4>
+            <div class="rmbqBtn">
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="60个话题">
+                <a href="#">响应式(60)</a>
+              </button>
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="57个话题">
+                <a href="#">收费(57)</a>
+              </button>
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="50个话题">
+                <a href="#">自适应(50)</a>
+              </button>
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="32个话题">
+                <a href="#">蓝色(32)</a>
+              </button>
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="28个话题">
+                <a href="#">两栏(28)</a>
+              </button>
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="27个话题">
+                <a href="#">免费(27)</a>
+              </button>
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="17个话题">
+                <a href="#">绿色(17)</a>
+              </button>
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="13个话题">
+                <a href="#">黑色(13)</a>
+              </button>
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="12个话题">
+                <a href="#">营销型(12)</a>
+              </button>
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="9个话题">
+                <a href="#">橙色(9)</a>
+              </button>
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="9个话题">
+                <a href="#">自媒体(9)</a>
+              </button>
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="7个话题">
+                <a href="#">收录(7)</a>
+              </button>
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="7个话题">
+                <a href="#">蓝白色(7)</a>
+              </button>
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="6个话题">
+                <a href="#">红色(6)</a>
+              </button>
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="6个话题">
+                <a href="#">三栏(6)</a>
+              </button>
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="8个话题">
+                <a href="#">粉绿色(8)</a>
+              </button>
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="6个话题">
+                <a href="#">电子产品(6)</a>
+              </button>
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="5个话题">
+                <a href="#">robots(5)</a>
+              </button>
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="5个话题">
+                <a href="#">外贸主题(5)</a>
+              </button>
+              <button type="button" class="btn btn-default col-lg-6" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="5个话题">
+                <a href="#">单栏(5)</a>
+              </button>
+            </div>
+            <script>
+                $(function () {
+                    $("[data-toggle='popover']").popover();
+                });
+            </script>
+          </div>
           <!--热门标签 结束-->
+
+
+
+          <!--个人头像信息 开始-->
+          <div class="row grtx">
+
+          </div>
+          <!--个人头像信息 结束-->
+
 
 
           <!--访问记录 开始-->

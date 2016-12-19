@@ -141,4 +141,22 @@ $(function(){
 
 
 
+    //rmbq热门标签的随机颜色设置
+    //颜色值0-9a-f
+    //rgba(10, 20, 30, 0.3); //使用rgba函数来, 把里面的值变成随机值
+    console.log(Math.floor(Math.random()*100));//0-99
+    var btns = $('.rmbqBtn button a');
+
+
+    for(var i=0 ; i< btns.length; i++){
+        btns.eq(i).css({
+            display:'inline-block',
+            width:'100%',
+            height:'100%',
+            color : '#fff',
+            background : 'rgba('+Math.floor(Math.random()*100+60)+', '+Math.floor(Math.random()*100+50)+', '+Math.floor(Math.random()*100+150)+', '+0.5+')'
+        });
+    }
+
+
 });
