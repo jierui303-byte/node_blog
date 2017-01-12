@@ -147,7 +147,6 @@ $(function(){
     console.log(Math.floor(Math.random()*100));//0-99
     var btns = $('.rmbqBtn button a');
 
-
     for(var i=0 ; i< btns.length; i++){
         btns.eq(i).css({
             display:'inline-block',

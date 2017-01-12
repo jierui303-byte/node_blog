@@ -122,6 +122,32 @@
           <!--文章列表页 开始-->
           <div class="row articleList">
             <ul class="list-group">
+
+                <% articleLists.forEach(function(article){ %>
+              <li class="list-group-item">
+                <h3><a href="/article/<%= article._id %>"><%= article.title %></a></h3>
+                <div class="row articleListB">
+                  <div class="col-lg-4 articleListBImg">
+                    <a href="/article/<%= article._id %>"><img src="http://www.cuizl.com/wp-content/themes/bamboo/timthumb.php?src=http://www.cuizl.com/wp-content/themes/bamboo/img/pic/2.jpg&h=123&w=200&q=90&zc=1&ct=1" alt=""></a>
+                  </div>
+                  <div class="col-lg-8 articleListBTitle">
+
+                    <p><%= article.description %>&……<span class="continue"><a href="/article/<%= article._id %>">继续阅读 »</a></span></p>
+
+                    <ul class="list-group articleLabel">
+                      <li class="list-group-item col-lg-3"><a href="#"><i class="glyphicon glyphicon-user"></i><%= article.author %></a></li>
+                      <li class="list-group-item col-lg-3"><a href="#"><i class="glyphicon glyphicon-time"></i><%= article.author %></a></li>
+                      <li class="list-group-item col-lg-3"><a href="#"><i class="glyphicon glyphicon-eye-open"></i><%= article.glanceCount %>次浏览</a></li>
+                      <li class="list-group-item col-lg-3"><a href="#"><i class="glyphicon glyphicon-comment"></i>0个评论</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+                <% }) %>
+
+
+
+
               <li class="list-group-item">
                 <h3><a href="#">字符串替换函数str_replace() 与正则表达式替换函数ereg_replace()的使用方法的使用方法的使用方法的使用方法</a></h3>
                 <div class="row articleListB">

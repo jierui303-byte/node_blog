@@ -787,21 +787,12 @@
           <div class="row fenlei">
             <h4>分类目录</h4>
             <ul class="list-group">
+                <% categoryLists.forEach(function(category){ %>
               <li class="list-group-item col-lg-6">
-                <a href="/article/list/0" class="stage">php基础</a>
+                <a href="/article/list/<%= category._id %>" class="stage"><%= category.categoryName %></a>
               </li>
-              <li class="list-group-item col-lg-6">
-                <a href="/article/list/0" class="stage">C++</a>
-              </li>
-              <li class="list-group-item col-lg-6">
-                <a href="/article/list/0" class="stage">Java</a>
-              </li>
-              <li class="list-group-item col-lg-6">
-                <a href="/article/list/0" class="stage">Android</a>
-              </li>
-              <li class="list-group-item col-lg-6">
-                wordpress
-              </li>
+                <% }) %>
+
               <li class="list-group-item col-lg-6">CMS主题</li>
               <li class="list-group-item col-lg-6">seo</li>
               <li class="list-group-item col-lg-6">wordpress企业主题</li>

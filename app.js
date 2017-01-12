@@ -19,7 +19,7 @@ var users = require('./routes/users');
 //后台路由文件引入
 var adminIndex = require('./routes/admin/index');//后台首页路由
 var adminArticle = require('./routes/admin/article');//文章路由
-var adminCategory = require('./routes/admin/category');//文章路由
+var adminCategory = require('./routes/admin/category');//类目路由
 
 
 
