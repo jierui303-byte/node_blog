@@ -1,0 +1,63 @@
+﻿h1{margin: 0px;}
+
+/*vip*/
+.vipModal{width: 100%;height: 100%;background:#f4f4f4;position:fixed;top: 0px;left:0px;z-index: 9999;font-size: 100%;display:none;overflow-y: auto !important;}
+.vipModal .closeBtn{position: absolute;width: 66px;cursor: pointer;height: 66px;top: 10px;right: 10px;background: url(../images/zxbj/close.png)no-repeat;}
+.vipModal .closeBtn:hover{opacity: .8;}
+.vipModal .hd{background: #00c091;height: 410px;}
+.vipModal .bd{width: 1240px;margin: 0 auto;padding-top: 330px;padding-bottom: 50px;height: 100%;}
+.vipModal .text{padding: 75px 0;font-size: 20px;color: #fff;text-align: center;}
+.vipModal .text span{color: #fff000;font-weight: bold;padding: 0 10px;}
+.vipModal .hd .dz{width: 487px;margin: 0 auto;}
+.vipModal .con{width: 1240px;margin: 0 auto;min-height:490px;}
+.vipModal .con li{float:left;height:auto;text-align: center;margin-left: -1px;}
+.vipModal .con li:last-child{margin-left: 28px;}
+.vipModal .con .vipItem{width: 300px;height:454px;padding: 60px 40px;color: #383838;display: inline-block;text-align: center;border-radius: 4px;border: 1px solid #00c091;background: #fff;}
+.vipModal .con .vipItem h2{font-size: 24px;margin-bottom: 40px;padding-bottom: 20px;color: #00c091;line-height: 24px;position: relative;}
+.vipModal .con .vipItem p{color: #a7a7a7;line-height: 28px;font-size: 14px;padding: 20px 0 100px 0;}
+.vipModal .con .vipItem span.price{font-size: 48px;font-weight: bold;display: block;color: #7d7d7d;line-height: 48px;}
+.vipModal .con .vipItem span.price s{text-decoration: none;font-size: 20px;font-weight: normal;}
+.vipModal .con .vipItem a{font-size: 18px;color: #00c091;background: #fff;border: 1px solid #00c091;height: 55px;line-height: 55px;padding: 0 60px;display: inline-block;border-radius: 44px;transition: all .3s;-webkit-transition: all .3s;}
+.vipModal .con .vipItem a:hover{color: #fff;background: #00c091;}
+.vipModal .con .vipItem.hyqy{background:#fff url(../images/zxbj/hyqy.png) no-repeat 0px -1px;}
+.vipModal .con .vipItem.year{background:#fff url(../images/zxbj/rmtj.png) no-repeat -1px -1px;}
+.vipModal .con .vipItem .choose{height: 136px;padding: 50px 87px;}
+.vipModal .con .vipItem .choose span{font-size: 14px;color: #a7a7a7;display: inline-block;float: left;}
+.vipModal .con .vipItem .choose span.xz{position: relative;cursor: pointer;margin: 0 10px;width: 50px;height: 28px;border: 1px solid #c0dcd5;background: #c8f1e7;border-radius: 50px;display: inline-block;}
+.vipModal .con .vipItem .choose span.xz i{width: 30px;height: 30px;background: #00c091;position: absolute;top: -2px;border-radius: 50%;box-shadow: 1px 2px 5px 0px rgba(0,0,0,.2);transition:all .3s;}
+.vipModal .con .vipItem .choose span.xz.m i{left: -4px;}
+.vipModal .con .vipItem .choose span.xz.y i{left: 26px;}
+.vipModal p.dz{color: #9d9d9d;font-size: 14px;padding-left: 30px;background: url(../images/zxbj/lb.png) no-repeat 0px center;}
+.vipModal .bd ul li{float: left;width: 620px;margin-bottom: 35px;min-height: 86px;}
+.vipModal .bd ul li .inner{float: left;width: 370px;}
+.vipModal .bd ul li:nth-child(2n) .inner{float: right;}
+.vipModal .bd h1{font-size: 24px;color: #00c091;font-weight: normal;margin-bottom: 50px;text-align: center;text-indent: -999em;background: url(../images/zxbj/pay_h2.png) no-repeat center;height: 50px;}
+.vipModal .bd h3{font-weight: normal;font-size: 16px;color: #010101;margin-bottom: 15px;}
+.vipModal .bd p{font-size: 14px;color: #999;}
+
+.modal-backdrop.in{opacity: .6;background: rgb(16, 121, 95);}
+.modal-open{overflow-y: hidden;padding: 0px !important;}
+.modal-content{box-shadow: none;border: none;border-radius: 3px;}
+.modal-dialog{border-radius: 4px;}
+/*支付提示*/
+.payModal .modal-dialog{z-index: 1002;width: 324px;height: 280px;position: absolute;top: 50%;left: 50%;margin-top: -140px;margin-left: -162px;padding: 22px;border-radius: 4px;background:#fff;}
+.payModal .modal-content .title{position: relative;margin-top: 10px}
+.payModal .modal-content .title h2{position: relative;z-index:2;text-align: center;font-size: 18px;font-weight: normal;color: #acacac;margin:0 auto;background: #fff;width: 140px;}
+.payModal .modal-content .title span{position:absolute;z-index:1;height: 1px;width: 100%;background:#d9d9d9;top:12px;left: 0px;}
+.payModal .modal-content .pbtn{padding-top: 50px;}
+.payModal .modal-content .pbtn a{height:54px;line-height:54px;margin-bottom: 20px;border-radius: 4px;display: block;color:#fff;background: #3ebf62 url(../images/zxbj/zx_index_sp.png) no-repeat 88px -1541px;padding-left: 123px;}
+.payModal .modal-content .pbtn a.zfb{background-color:#01a1ec;background-position:88px -1616px;}
+.payModal .modal-content .pbtn a.zfb:hover{background-color:#10aaf2;}
+.payModal .modal-content .pbtn a.zfb:active{background-color:#1090cc;}
+.payModal .modal-content .pbtn a.wx:hover{background-color:#48cb6c;}
+.payModal .modal-content .pbtn a.wx:active{background-color:#32ae54;}
+.payModal .modal-tips{z-index: 1002;width: 444px;height: 244px;position: absolute;top: 50%;left: 50%;margin-top: -122px;margin-left: -222px;border-radius: 4px;background:#fff;}
+.payModal .modal-tips h2{padding:0 20px;line-height: 36px;background:#00c091;font-weight: normal;color: #fff;border-top-left-radius:4px;border-top-right-radius:4px;}
+.payModal .modal-tips p{margin:40px 28px 25px 0;color:#9a9a9a;background: url(../images/zxbj/zx_index_sp.png) no-repeat 28px -1702px;height: 62px;padding: 7px 0px 0px 102px;line-height: 24px;}
+.payModal .modal-tips .pbtn{padding-left:110px;}
+.payModal .modal-tips .pbtn a{width:124px;height: 34px;line-height: 33px;display: inline-block;margin-right:15px;border-radius:4px;border:1px solid #ff4500;background:#ff4500;color:#fff;text-align: center;}
+.payModal .modal-tips .pbtn a.no{border-color:#ddd;color:#4a4a4a;background:#f5f5f5;}
+.payModal .modal-tips .pbtn a.no:hover{opacity:.8;}
+.payModal .modal-tips .pbtn a.yes:hover{border-color:#c33905;color:#fff;background:#fc571a;}
+.payModal .modal-tips .pbtn a.yes:active{border-color:#c33905;color:#752000;background:#e34f18;}
+.payModal .modal-tips .pbtn a.no:active{border-color:#2b9f4b;color:#195A2B;background:#3EBD62;}

@@ -1,0 +1,898 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+/*
+scss文件编译:
+1. 进入scss文件所在目录,
+http://www.w3cplus.com/sassguide/compile.html
+执行单文件转换命令进行编译:
+sass style.scss style.css   //把style.scss文件编译成style.css文件
+
+最外层的类自定义, 这样就可以重写里面的css样式, 不会影响到全局的css样式
+*/
+header {
+  background: #fff;
+  min-height: 100px;
+  font-size: 18px; }
+  header .logo {
+    display: block;
+    margin-top: 10px; }
+    header .logo .img-thumbnail {
+      border: none; }
+  header .input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    top: 33px; }
+    header .input-group .form-control {
+      height: 41px;
+      border: 3px solid #4CAF50;
+      border-radius: 0; }
+    header .input-group .btn {
+      height: 41px; }
+    header .input-group .btn-default {
+      color: #fff;
+      background-color: #4CAF50;
+      border-color: #4CAF50; }
+  header .gg1 {
+    display: block;
+    margin: 25px 90px; }
+
+.navbar-default.navigator {
+  background-color: #4a4a4a;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  border-bottom: 5px solid #4CAF50; }
+  .navbar-default.navigator .navbar-nav {
+    margin-bottom: 0; }
+  .navbar-default.navigator .navbar-nav > li > a {
+    color: #fff; }
+    .navbar-default.navigator .navbar-nav > li > a:hover {
+      color: #fff;
+      background-color: #5eb762; }
+  .navbar-default.navigator .navbar-nav > .active a:hover {
+    color: #fff;
+    background-color: #5eb762; }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover {
+  color: #555;
+  background-color: #5eb762; }
+
+.notice {
+  height: 39px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background: #fff; }
+  .notice ul li {
+    background: url("/images/volume.png") no-repeat 6% 12px;
+    padding-left: 8%; }
+    .notice ul li a {
+      padding-left: 10px;
+      width: 90%;
+      /*要显示文字的宽度*/
+      overflow: hidden;
+      /*超出的部分隐藏起来。*/
+      white-space: nowrap;
+      /*不显示的地方用省略号...代替*/
+      text-overflow: ellipsis;
+      /* 支持 IE */ }
+      .notice ul li a:hover {
+        text-decoration: none; }
+
+@media (min-width: 768px) {
+  .navbar {
+    border-radius: 4px; }
+
+  .navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0;
+    border: 1px solid transparent; } }
+.col-lg-69 {
+  width: 69%; }
+
+.col-lg-30 {
+  width: 30%; }
+
+.content .contentLeft {
+  float: left; }
+  .content .contentLeft .lunbo .carousel-inner > .active img {
+    transform: scale(1);
+    transition: all 0.5s; }
+  .content .contentLeft .lunbo .carousel-inner > .active:hover img {
+    transform: scale(1.1); }
+  .content .contentLeft .lunbo .carousel-caption {
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 86%;
+    padding-top: 9px;
+    background: rgba(0, 0, 0, 0.3); }
+  .content .contentLeft .newContent {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff; }
+    .content .contentLeft .newContent h3 {
+      color: #555;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #5eb762; }
+    .content .contentLeft .newContent ul li {
+      border: none; }
+      .content .contentLeft .newContent ul li i {
+        color: #bbb;
+        transform: rotate(0deg);
+        transition: all 1s; }
+      .content .contentLeft .newContent ul li:hover > i {
+        transform: rotate(360deg);
+        color: #4a4a4a; }
+      .content .contentLeft .newContent ul li a {
+        display: inline-block;
+        color: #00a67c;
+        font-size: 13px;
+        padding-left: 3px;
+        width: 94%;
+        /*要显示文字的宽度*/
+        overflow: hidden;
+        /*超出的部分隐藏起来。*/
+        white-space: nowrap;
+        /*不显示的地方用省略号...代替*/
+        text-overflow: ellipsis;
+        /* 支持 IE */
+        transition: all 0.3s; }
+        .content .contentLeft .newContent ul li a:hover {
+          color: #007046;
+          text-decoration: none; }
+    .content .contentLeft .newContent ul li:nth-of-type(1n) {
+      width: 49.5%;
+      float: left;
+      margin-right: 5px; }
+    .content .contentLeft .newContent ul li:nth-of-type(2n) {
+      float: right;
+      margin-right: 0; }
+  .content .contentLeft .qyzt {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff; }
+    .content .contentLeft .qyzt h3 {
+      color: #555;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #5eb762; }
+    .content .contentLeft .qyzt ul {
+      overflow: hidden; }
+      .content .contentLeft .qyzt ul li {
+        float: left;
+        height: 170px;
+        position: relative;
+        border: none;
+        padding: 5px; }
+        .content .contentLeft .qyzt ul li a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          background: #fff; }
+          .content .contentLeft .qyzt ul li a img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            transform: scale(1.1) rotate(0deg);
+            transition: all 1s; }
+          .content .contentLeft .qyzt ul li a:hover img {
+            transform: scale(1.1) rotate(30deg); }
+        .content .contentLeft .qyzt ul li .qyztitle {
+          width: 96.5%;
+          height: 17%;
+          background: rgba(0, 0, 0, 0.2);
+          color: #fff;
+          position: absolute;
+          bottom: 10px;
+          left: 5px;
+          padding: 5px; }
+          .content .contentLeft .qyzt ul li .qyztitle p {
+            width: 94%;
+            /*要显示文字的宽度*/
+            overflow: hidden;
+            /*超出的部分隐藏起来。*/
+            white-space: nowrap;
+            /*不显示的地方用省略号...代替*/
+            text-overflow: ellipsis;
+            /* 支持 IE */
+            text-indent: -100px;
+            transform: rotateY(90deg);
+            transition: all 1s; }
+        .content .contentLeft .qyzt ul li:hover .qyztitle {
+          background: rgba(0, 0, 0, 0.5); }
+        .content .contentLeft .qyzt ul li:hover p {
+          text-indent: 0;
+          transform: rotateY(0deg); }
+  .content .contentLeft .lxsl {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff; }
+    .content .contentLeft .lxsl h3 {
+      color: #555;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #5eb762; }
+    .content .contentLeft .lxsl ul {
+      overflow: hidden; }
+      .content .contentLeft .lxsl ul li {
+        float: left;
+        height: 170px;
+        position: relative;
+        border: none;
+        padding: 5px; }
+        .content .contentLeft .lxsl ul li a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          background: #fff;
+          position: relative; }
+          .content .contentLeft .lxsl ul li a .imgLeft {
+            width: 50%;
+            height: 100%;
+            float: left;
+            overflow: hidden;
+            transition: all 1s; }
+            .content .contentLeft .lxsl ul li a .imgLeft img {
+              height: 100%;
+              position: relative;
+              left: 0; }
+          .content .contentLeft .lxsl ul li a .imgRight {
+            width: 50%;
+            height: 100%;
+            float: left;
+            overflow: hidden;
+            transition: all 1s; }
+            .content .contentLeft .lxsl ul li a .imgRight img {
+              height: 100%;
+              position: relative; }
+          .content .contentLeft .lxsl ul li a .imgCenter {
+            position: absolute;
+            top: 0;
+            left: 85px; }
+            .content .contentLeft .lxsl ul li a .imgCenter img {
+              display: block;
+              border-radius: 50%; }
+        .content .contentLeft .lxsl ul li .qyztitle {
+          width: 96.5%;
+          height: 17%;
+          background: rgba(0, 0, 0, 0.2);
+          color: #fff;
+          position: absolute;
+          bottom: 10px;
+          left: 5px;
+          padding: 5px; }
+          .content .contentLeft .lxsl ul li .qyztitle p {
+            width: 94%;
+            /*要显示文字的宽度*/
+            overflow: hidden;
+            /*超出的部分隐藏起来。*/
+            white-space: nowrap;
+            /*不显示的地方用省略号...代替*/
+            text-overflow: ellipsis;
+            /* 支持 IE */
+            text-align: center;
+            transform: rotateY(90deg);
+            transition: all 1s; }
+        .content .contentLeft .lxsl ul li:hover .qyztitle {
+          background: rgba(0, 0, 0, 0.5); }
+        .content .contentLeft .lxsl ul li:hover p {
+          transform: rotateY(0deg); }
+  .content .contentLeft .ysjs {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff; }
+    .content .contentLeft .ysjs h3 {
+      color: #555;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #5eb762; }
+    .content .contentLeft .ysjs ul {
+      overflow: hidden; }
+      .content .contentLeft .ysjs ul li {
+        float: left;
+        height: 260px;
+        position: relative;
+        overflow: hidden;
+        border: none;
+        padding: 5px; }
+        .content .contentLeft .ysjs ul li a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          background: #fff;
+          position: relative; }
+          .content .contentLeft .ysjs ul li a img {
+            display: block;
+            width: 100%;
+            height: 100%; }
+        .content .contentLeft .ysjs ul li .qyztitle {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          width: 0;
+          height: 0;
+          background: rgba(0, 0, 0, 0.1);
+          transition: all 1s; }
+        .content .contentLeft .ysjs ul li:hover .qyztitle {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.4); }
+        .content .contentLeft .ysjs ul li .qyztjs1 {
+          position: absolute;
+          top: 100px;
+          left: 1000px;
+          font-size: 20px;
+          font-family: "Arial Black" SansSerif;
+          color: rgba(255, 255, 255, 0.9);
+          transition: all 1s; }
+        .content .contentLeft .ysjs ul li:hover .qyztjs1 {
+          top: 100px;
+          left: 10px;
+          text-indent: 20px;
+          padding: 10px 0; }
+        .content .contentLeft .ysjs ul li .qyztjs2 {
+          position: absolute;
+          top: 160px;
+          left: -1000px;
+          font-size: 16px;
+          font-family: "Arial Black" SansSerif;
+          color: #beb7a7;
+          transition: all 1s; }
+        .content .contentLeft .ysjs ul li:hover .qyztjs2 {
+          top: 160px;
+          left: 30px;
+          text-indent: 20px;
+          padding: 10px 0; }
+        .content .contentLeft .ysjs ul li .qyztjs3 {
+          position: absolute;
+          right: 1000px;
+          bottom: -1000px;
+          font-size: 14px;
+          font-family: "Arial Black" SansSerif;
+          color: #beb7a7;
+          transition: all 1s; }
+        .content .contentLeft .ysjs ul li:hover .qyztjs3 {
+          right: 30px;
+          bottom: 10px;
+          text-indent: 20px;
+          padding: 10px 0; }
+  .content .contentLeft .TabQHY {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff; }
+    .content .contentLeft .TabQHY ul {
+      border-bottom: 4px solid #333; }
+      .content .contentLeft .TabQHY ul li a {
+        color: #757575; }
+    .content .contentLeft .TabQHY .nav-tabs > li.active > a, .content .contentLeft .TabQHY .nav-tabs > li.active > a:hover, .content .contentLeft .TabQHY .nav-tabs > li.active > a:focus {
+      color: #fff;
+      cursor: default;
+      background-color: #333;
+      border: 1px solid #333;
+      border-bottom-color: transparent; }
+    .content .contentLeft .TabQHY #myTabContents {
+      padding-top: 20px; }
+      .content .contentLeft .TabQHY #myTabContents .tabCNp {
+        padding: 0;
+        position: relative; }
+        .content .contentLeft .TabQHY #myTabContents .tabCNp .qyztitle {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          color: #fff;
+          width: 100%;
+          background: rgba(0, 0, 0, 0.6); }
+          .content .contentLeft .TabQHY #myTabContents .tabCNp .qyztitle p {
+            text-align: center;
+            margin: 0;
+            padding: 3px 0; }
+          .content .contentLeft .TabQHY #myTabContents .tabCNp .qyztitle p:nth-of-type(2) {
+            color: #999; }
+      .content .contentLeft .TabQHY #myTabContents .tabCNpw {
+        margin-right: 0;
+        padding-right: 2px; }
+        .content .contentLeft .TabQHY #myTabContents .tabCNpw .tabCNps {
+          padding: 0;
+          position: relative;
+          width: 49%;
+          height: 112px;
+          overflow: hidden;
+          margin-right: 5px;
+          margin-bottom: 15px; }
+          .content .contentLeft .TabQHY #myTabContents .tabCNpw .tabCNps .tabmtb a {
+            display: block;
+            width: 45%;
+            height: 50%;
+            overflow: hidden; }
+            .content .contentLeft .TabQHY #myTabContents .tabCNpw .tabCNps .tabmtb a img {
+              width: 100%;
+              height: 100%; }
+          .content .contentLeft .TabQHY #myTabContents .tabCNpw .tabCNps .qyztitle {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: #fff;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5); }
+            .content .contentLeft .TabQHY #myTabContents .tabCNpw .tabCNps .qyztitle p {
+              text-align: center;
+              margin: 0;
+              padding: 3px 0; }
+            .content .contentLeft .TabQHY #myTabContents .tabCNpw .tabCNps .qyztitle p:nth-of-type(2) {
+              color: #999; }
+        .content .contentLeft .TabQHY #myTabContents .tabCNpw .tabCNps:nth-of-type(2n) {
+          margin-right: 0; }
+      .content .contentLeft .TabQHY #myTabContents #profile1 .profileDiv {
+        padding: 0;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        width: 24%;
+        height: 128px; }
+        .content .contentLeft .TabQHY #myTabContents #profile1 .profileDiv .imgP {
+          display: block;
+          width: 100%;
+          height: 100%;
+          overflow: hidden; }
+          .content .contentLeft .TabQHY #myTabContents #profile1 .profileDiv .imgP img {
+            width: 100%;
+            height: 100%; }
+        .content .contentLeft .TabQHY #myTabContents #profile1 .profileDiv .qyztitle {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          color: #fff;
+          width: 100%;
+          background: rgba(0, 0, 0, 0.5); }
+          .content .contentLeft .TabQHY #myTabContents #profile1 .profileDiv .qyztitle p {
+            text-align: center;
+            margin: 0;
+            padding: 3px 0; }
+          .content .contentLeft .TabQHY #myTabContents #profile1 .profileDiv .qyztitle p:nth-of-type(2) {
+            color: #999; }
+      .content .contentLeft .TabQHY #myTabContents #profile1 .profileDiv:nth-of-type(4n) {
+        margin-right: 0; }
+      .content .contentLeft .TabQHY #myTabContents #messages1 .messages1Div {
+        padding: 0;
+        width: 24%;
+        height: 250px;
+        margin-right: 10px;
+        margin-bottom: 10px; }
+        .content .contentLeft .TabQHY #myTabContents #messages1 .messages1Div .imgP {
+          display: block;
+          width: 100%;
+          height: 80%;
+          overflow: hidden; }
+          .content .contentLeft .TabQHY #myTabContents #messages1 .messages1Div .imgP img {
+            width: 100%;
+            height: 100%; }
+        .content .contentLeft .TabQHY #myTabContents #messages1 .messages1Div .qyztitle {
+          width: 100%;
+          height: 20%;
+          background: #fff; }
+          .content .contentLeft .TabQHY #myTabContents #messages1 .messages1Div .qyztitle p {
+            text-align: center;
+            margin: 0;
+            padding: 5px 0; }
+          .content .contentLeft .TabQHY #myTabContents #messages1 .messages1Div .qyztitle p:nth-of-type(2) {
+            color: #999; }
+      .content .contentLeft .TabQHY #myTabContents #messages1 .messages1Div:nth-of-type(4n) {
+        margin-right: 0; }
+      .content .contentLeft .TabQHY #myTabContents #settings1 .profileDiv {
+        padding: 0;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        width: 24%;
+        height: 128px; }
+        .content .contentLeft .TabQHY #myTabContents #settings1 .profileDiv .imgP {
+          display: block;
+          width: 100%;
+          height: 100%;
+          overflow: hidden; }
+          .content .contentLeft .TabQHY #myTabContents #settings1 .profileDiv .imgP img {
+            width: 100%;
+            height: 100%; }
+        .content .contentLeft .TabQHY #myTabContents #settings1 .profileDiv .qyztitle {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          color: #fff;
+          width: 100%;
+          background: rgba(0, 0, 0, 0.5); }
+          .content .contentLeft .TabQHY #myTabContents #settings1 .profileDiv .qyztitle p {
+            text-align: center;
+            margin: 0;
+            padding: 3px 0; }
+          .content .contentLeft .TabQHY #myTabContents #settings1 .profileDiv .qyztitle p:nth-of-type(2) {
+            color: #999; }
+      .content .contentLeft .TabQHY #myTabContents #settings1 .profileDiv:nth-of-type(4n) {
+        margin-right: 0; }
+.content .contentRight {
+  float: right;
+  overflow: hidden; }
+  .content .contentRight .contentRightRow {
+    margin-bottom: 10px; }
+  .content .contentRight .hotArticle {
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px; }
+    .content .contentRight .hotArticle h4 {
+      border-bottom: 1px solid #4CAF50;
+      padding: 0 0 20px 0; }
+    .content .contentRight .hotArticle ul li {
+      padding: 10px 0;
+      border: none; }
+      .content .contentRight .hotArticle ul li a {
+        display: block;
+        color: #00a67c;
+        text-decoration: none;
+        width: 94%;
+        /*要显示文字的宽度*/
+        overflow: hidden;
+        /*超出的部分隐藏起来。*/
+        white-space: nowrap;
+        /*不显示的地方用省略号...代替*/
+        text-overflow: ellipsis;
+        /* 支持 IE */ }
+        .content .contentRight .hotArticle ul li a:hover {
+          color: #007046; }
+  .content .contentRight .fenlei {
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px; }
+    .content .contentRight .fenlei h4 {
+      border-bottom: 1px solid #4CAF50;
+      padding: 0 0 20px 0;
+      transition: all 0.3s; }
+      .content .contentRight .fenlei h4:hover {
+        transform: rotateX(60deg); }
+    .content .contentRight .fenlei ul li:nth-of-type(1n) {
+      float: left;
+      background: orchid;
+      color: #fff; }
+      .content .contentRight .fenlei ul li:nth-of-type(1n) a {
+        width: 100%;
+        height: 100%; }
+    .content .contentRight .fenlei ul li:nth-of-type(2n) {
+      float: right;
+      background: olivedrab;
+      color: #2b542c; }
+  .content .contentRight .Tabqhy .nav-tabs > li > a {
+    margin-right: 0;
+    border: none; }
+  .content .contentRight .Tabqhy #myTabContent li {
+    padding: 10px; }
+  .content .contentRight .tjzt {
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px; }
+    .content .contentRight .tjzt h4 {
+      border-bottom: 1px solid #4CAF50;
+      padding: 0 0 20px 0;
+      transition: all 0.3s; }
+    .content .contentRight .tjzt .tjztWLi {
+      padding: 0 0 10px 0;
+      border: none; }
+      .content .contentRight .tjzt .tjztWLi ul {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee; }
+        .content .contentRight .tjzt .tjztWLi ul li {
+          overflow: hidden; }
+          .content .contentRight .tjzt .tjztWLi ul li a {
+            display: inline-block;
+            overflow: hidden;
+            height: 70px;
+            padding: 0; }
+            .content .contentRight .tjzt .tjztWLi ul li a img {
+              display: block;
+              width: 100%;
+              height: 100%; }
+          .content .contentRight .tjzt .tjztWLi ul li .tjztNLiDiv {
+            padding-left: 10px;
+            padding-right: 0; }
+            .content .contentRight .tjzt .tjztWLi ul li .tjztNLiDiv .tjztNLiH4 {
+              font-weight: 100;
+              width: 100%;
+              /*要显示文字的宽度*/
+              font-size: 14px;
+              line-height: 20px;
+              height: 40px;
+              margin-bottom: 10px;
+              border: none;
+              overflow: hidden; }
+              .content .contentRight .tjzt .tjztWLi ul li .tjztNLiDiv .tjztNLiH4 a {
+                color: #000;
+                text-decoration: none; }
+                .content .contentRight .tjzt .tjztWLi ul li .tjztNLiDiv .tjztNLiH4 a:hover {
+                  color: #d9534f; }
+            .content .contentRight .tjzt .tjztWLi ul li .tjztNLiDiv p {
+              font-size: 13px;
+              height: 20px;
+              line-height: 20px;
+              margin: 0;
+              color: #9d9d9d; }
+              .content .contentRight .tjzt .tjztWLi ul li .tjztNLiDiv p span:nth-of-type(1) {
+                display: inline-block;
+                margin-right: 10px; }
+  .content .contentRight .rmbq {
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px; }
+    .content .contentRight .rmbq h4 {
+      border-bottom: 1px solid #4CAF50;
+      padding: 0 0 20px 0;
+      transition: all 0.3s; }
+    .content .contentRight .rmbq .rmbqBtn button {
+      padding: 0;
+      margin: 2px 0; }
+      .content .contentRight .rmbq .rmbqBtn button a {
+        text-align: left;
+        padding: 3px 5px;
+        text-decoration: none; }
+  .content .contentRight .grtx {
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px; }
+    .content .contentRight .grtx h4 {
+      border-bottom: 1px solid #4CAF50;
+      padding: 0 0 20px 0;
+      transition: all 0.3s; }
+    .content .contentRight .grtx div.grtxImg {
+      height: 100px;
+      margin-bottom: 10px; }
+      .content .contentRight .grtx div.grtxImg a {
+        display: block;
+        width: 80px;
+        height: 80px;
+        margin-left: 46px;
+        padding: 0;
+        margin-top: 16px; }
+        .content .contentRight .grtx div.grtxImg a img {
+          display: block;
+          width: 100%;
+          height: 100%; }
+      .content .contentRight .grtx div.grtxImg .grtxImgRight {
+        padding-top: 30px; }
+        .content .contentRight .grtx div.grtxImg .grtxImgRight p {
+          padding: 10px 8px;
+          height: 20px;
+          line-height: 20px; }
+    .content .contentRight .grtx .grtxInfo li {
+      border: none; }
+      .content .contentRight .grtx .grtxInfo li span:nth-of-type(1) {
+        display: inline-block;
+        width: 100px;
+        text-align: right; }
+      .content .contentRight .grtx .grtxInfo li span:nth-of-type(2) {
+        display: inline-block;
+        width: 180px;
+        padding-left: 25px; }
+
+.popover.top {
+  background: rgba(0, 112, 70, 0.66);
+  border-radius: 0;
+  border: none; }
+
+.popover.top .arrow:after {
+  border-top-color: rgba(0, 112, 70, 0.66); }
+
+.popover-content {
+  padding: 2px 3px;
+  color: #fff;
+  font-size: 12px; }
+
+.contentMB {
+  padding: 0; }
+  .contentMB .breadcrumb {
+    border-radius: 0;
+    border-bottom: 1px solid #4CAF50;
+    margin-bottom: 0; }
+    .contentMB .breadcrumb a {
+      color: #00a67c; }
+      .contentMB .breadcrumb a .glyphicon-home:before {
+        display: inline-block;
+        margin-right: 5px; }
+      .contentMB .breadcrumb a:hover {
+        color: #007046;
+        text-decoration: none; }
+
+.articleContent {
+  background: #fff; }
+  .articleContent h2 a {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    color: #444;
+    padding-top: 10px; }
+    .articleContent h2 a:hover {
+      text-decoration: none; }
+  .articleContent .articleLabel {
+    width: 60%;
+    overflow: hidden;
+    margin: 0 auto; }
+    .articleContent .articleLabel li {
+      float: left;
+      text-align: center;
+      border-radius: 0;
+      padding: 10px 0;
+      border: none; }
+      .articleContent .articleLabel li a {
+        color: #00a67c; }
+        .articleContent .articleLabel li a .glyphicon {
+          margin-right: 5px; }
+        .articleContent .articleLabel li a:hover {
+          text-decoration: none; }
+  .articleContent .contents {
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee; }
+    .articleContent .contents p {
+      line-height: 30px;
+      padding: 10px;
+      text-indent: 2rem; }
+
+.NextPrev {
+  height: 60px;
+  background: #fff;
+  line-height: 60px; }
+  .NextPrev .prevRight a, .NextPrev .nextLeft a {
+    color: #007046; }
+    .NextPrev .prevRight a:hover, .NextPrev .nextLeft a:hover {
+      text-decoration: none;
+      color: #00a67c; }
+  .NextPrev .prevRight {
+    height: 100%; }
+    .NextPrev .prevRight a {
+      display: block;
+      text-align: right;
+      width: 100%;
+      height: 100%; }
+
+.fbpl {
+  background: #fff;
+  padding: 10px; }
+
+.articleList ul {
+  margin-bottom: 0; }
+  .articleList ul li {
+    margin-bottom: 10px;
+    border: none; }
+    .articleList ul li:hover img {
+      transform: scale(1.1); }
+    .articleList ul li h3 a {
+      display: block;
+      width: 100%;
+      /*要显示文字的宽度*/
+      overflow: hidden;
+      /*超出的部分隐藏起来。*/
+      white-space: nowrap;
+      /*不显示的地方用省略号...代替*/
+      text-overflow: ellipsis;
+      /* 支持 IE */
+      font-size: 20px;
+      color: #00a67c; }
+      .articleList ul li h3 a:hover {
+        color: #007046;
+        text-decoration: none; }
+  .articleList ul li:last-of-type {
+    margin-bottom: 0; }
+  .articleList ul .articleListB {
+    margin-bottom: 10px;
+    padding-top: 10px; }
+    .articleList ul .articleListB .articleListBImg a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: olive; }
+      .articleList ul .articleListB .articleListBImg a img {
+        width: 100%;
+        transition: all 0.3s; }
+    .articleList ul .articleListB .articleListBTitle {
+      width: 66%;
+      padding-left: 0; }
+      .articleList ul .articleListB .articleListBTitle p {
+        text-indent: 2rem;
+        line-height: 22px;
+        color: #777; }
+        .articleList ul .articleListB .articleListBTitle p .continue a {
+          color: #00a67c; }
+          .articleList ul .articleListB .articleListBTitle p .continue a:hover {
+            color: #007046;
+            text-decoration: none; }
+      .articleList ul .articleListB .articleListBTitle .articleLabel {
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto; }
+        .articleList ul .articleListB .articleListBTitle .articleLabel li {
+          float: left;
+          text-align: center;
+          border-radius: 0;
+          padding: 10px 0;
+          border: none; }
+          .articleList ul .articleListB .articleListBTitle .articleLabel li a {
+            color: #9e9e9e; }
+            .articleList ul .articleListB .articleListBTitle .articleLabel li a .glyphicon {
+              margin-right: 5px; }
+            .articleList ul .articleListB .articleListBTitle .articleLabel li a:hover {
+              text-decoration: none;
+              color: #00a67c; }
+
+.pagers {
+  background: #fff;
+  margin-bottom: 10px;
+  border-top: 1px solid rgba(157, 157, 157, 0.1); }
+  .pagers .pager .pagination {
+    margin: 10px 5px;
+    float: right; }
+    .pagers .pager .pagination li .active {
+      background: #4CAF50;
+      color: #fff; }
+    .pagers .pager .pagination li > a {
+      background: #eee;
+      color: #000;
+      border-radius: 0;
+      margin: 2px; }
+      .pagers .pager .pagination li > a:hover {
+        background: #388E3C;
+        color: #fff; }
+
+footer {
+  background: #555;
+  border-top: 1px solid #00a67c;
+  padding: 30px 15px; }
+  footer .row {
+    text-align: center;
+    margin: 10px 0; }
+    footer .row p {
+      color: #4caf50; }
+
+/* 超小屏幕（手机，小于 768px） */
+/* 没有任何媒体查询相关的代码，因为这在 Bootstrap 中是默认的（还记得 Bootstrap 是移动设备优先的吗？） */
+@media screen and (min-width: 768px) {
+  .carousel-caption {
+    right: 0;
+    left: 0;
+    padding-bottom: 9px; } }
+@media screen and (max-width: 768px) {
+  .contentLeft {
+    width: 100%; }
+
+  .contentRight {
+    display: none; }
+
+  .content .contentLeft .newContent ul li:nth-of-type(1n) {
+    width: 100%; } }
+/* 小屏幕（平板，大于等于 768px） */
+@media screen and (min-width: 768px) {
+  .contentLeft {
+    width: 69%; }
+
+  .contentRight {
+    display: block; } }
+@media screen and (max-width: 992px) {
+  .contentLeft {
+    width: 100%; }
+
+  .contentRight {
+    display: none; }
+
+  .notice ul li {
+    background: url(/images/volume.png) no-repeat 10px 12px;
+    padding-left: 3%; } }
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+a {
+  color: #00B7FF; }
+
+/*# sourceMappingURL=style.css.map */
