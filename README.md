@@ -6,6 +6,9 @@
 - 使用jquery操控DOM元素
 
 ***
+
+***
+安装步骤:
 ----
 
 git clone https://github.com/jierui303/nodeBlog.git   把项目下载到当前目录下
